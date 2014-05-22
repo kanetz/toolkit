@@ -53,7 +53,7 @@ function commitChanges() {
     'use strict';
     exec('git push', {cwd: program.repository}, function(error, stdout, stderr) {
         logger.info(stdout);
-        logger.error(stderr);
+        logger.info(stderr);
         if(error) {
             throw new Error(error);
         }
